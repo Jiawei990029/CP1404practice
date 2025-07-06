@@ -1,20 +1,20 @@
 """
 guitar
 Estimate: 10 minutes
-Actual:   30 minutes
+Actual:   20 minutes
 """
 
 class Guitar:
     """Represent a Guitar object."""
 
-    def __init__(self, name="", year=0, cost=0):
+    def __init__(self, name="", year=0, cost=0.0):
         """Initialise a Guitar instance."""
         self.name = name
         self.year = year
         self.cost = cost
 
     def __str__(self):
-        return f"{self.name} ({self.year}) : ${self.cost}"
+        return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
     def get_age(self, year):
         """Get the age of the guitar."""
