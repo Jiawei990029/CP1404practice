@@ -1,7 +1,7 @@
 """
 programming_language
 Estimate: 10 minutes
-Actual:   18 minutes
+Actual:   30 minutes
 """
 
 class ProgrammingLanguage:
@@ -14,11 +14,12 @@ class ProgrammingLanguage:
         self.reflection = reflection
         self.year = year
 
+    def __str__(self):
+        return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year}"
+
     def is_dynamic(self, typing):
         """Determine whether typing is Dynamic"""
         if self.typing == "Dynamic":
             return True
         else:
             return False
-
-
