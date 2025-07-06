@@ -7,7 +7,7 @@ This is why we name our folders with no spaces or capitals, as valid module name
 """
 used_car
 Estimate: 10 minutes
-Actual:   30 minutes
+Actual:   18 minutes
 """
 
 from prac_06.car import Car
