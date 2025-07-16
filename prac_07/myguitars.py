@@ -14,4 +14,15 @@ def main():
     for guitar in guitars:
         print(guitar)
 
+    add_guitar()
+
+
+def add_guitar():
+    name = input("Name: ")
+    year = int(input("Year: "))
+    cost = float(input("Cost:$ "))
+    with open('guitars.csv', 'a') as add_file:
+        add_file.write(f"{name},{year},{cost}\n")
+
+
 main()
