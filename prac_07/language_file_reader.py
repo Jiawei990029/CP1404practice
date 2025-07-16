@@ -31,6 +31,13 @@ def main():
         language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
         # Add the language we've just constructed to the list
         languages.append(language)
+
+        name = parts[0]
+        if is_pointer_arithmetic(name):
+            parts.append("Yes")
+        else:
+            parts.append("No")
+
     # Close the file as soon as we've finished reading it
     in_file.close()
 
@@ -38,9 +45,15 @@ def main():
     for language in languages:
         print(language)
 
-
 main()
 
+
+def is_pointer_arithmetic(name):
+    support_list = ["C", "C++", "C#"]
+    if name in support_list:
+        return True
+    else:
+        return False
 
 def using_csv():
     """Language file reader version using the csv module."""
