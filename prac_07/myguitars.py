@@ -9,9 +9,9 @@ def main():
             guitar = Guitar(rows[0], int(rows[1]), float(rows[2]))
             guitars.append(guitar)
 
+    guitars.sort()
+
     for guitar in guitars:
         print(guitar)
-
-
 
 main()
