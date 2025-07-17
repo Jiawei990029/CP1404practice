@@ -36,6 +36,12 @@ def main():
             print(MENU)
             choice = input(">>> ").lower()
 
+        elif choice == "s":
+            save_choice = input("Which file do you want to save? ").lower()
+            save_file(save_choice, projects)
+            print(MENU)
+            choice = input(">>> ").lower()
+
         elif choice == "d":
             display_projects(projects)
             print(MENU)
