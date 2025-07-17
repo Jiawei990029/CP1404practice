@@ -56,14 +56,22 @@ def main():
             print(MENU)
             choice = input(">>> ").lower()
 
-    save_choice = input("Would you like to save to projects.txt? ")
-    save_file(save_choice)
+    save_choice = input("Would you like to save to projects.txt? ").lower()
+    save_file(save_choice, projects)
     print("Thank you for using custom-built project management software.")
 
 
-def save_file(save_choice):
-    if
-
+def save_file(save_choice, projects):
+    if "no" in save_choice:
+        pass
+    elif "yes" in save_choice:
+        with open('projects.txt', 'w') as in_file:
+            in_file.write("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage\n")
+            for project in projects:
+                new_line = f"{project.name}\t{project.date}\t{project.priority}\t{project.cost}\t{project.percentage}\n"
+                in_file.write(new_line)
+    else:
+        pass
 
 def load_file(load_filename):
     projects = []
