@@ -30,7 +30,13 @@ def main():
 
     while choice != "q":
 
-        if choice == "d":
+        if choice == "l":
+            load_filename = input("Which file do you want to load? ")
+            load_file(load_filename)
+            print(MENU)
+            choice = input(">>> ").lower()
+
+        elif choice == "d":
             display_projects(projects)
             print(MENU)
             choice = input(">>> ").lower()
@@ -50,8 +56,24 @@ def main():
             print(MENU)
             choice = input(">>> ").lower()
 
-    print()
+    save_choice = input("Would you like to save to projects.txt? ")
+    save_file(save_choice)
+    print("Thank you for using custom-built project management software.")
 
+
+def save_file(save_choice):
+    if
+
+
+def load_file(load_filename):
+    projects = []
+    with open(load_filename, 'r') as out_file:
+        out_file.readline()
+        for line in out_file:
+            row = line.strip().split('\t')
+            project = Project(row[0], row[1], int(row[2]), float(row[3]), int(row[4]))
+            projects.append(project)
+    print(f"Loaded {len(projects)} projects from projects.txt")
 
 def filter_project(projects):
     input_date = input("Show projects that start after date (dd/mm/yy): ")
