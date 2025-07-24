@@ -1,0 +1,14 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        id: main
+        orientation: 'vertical'
+    Label:
+        size_hint_y: 0.1
+        text: app.status_text
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.2
+        Button:
+            text: "Create Widgets"
+            on_press: app.create_widgets()
