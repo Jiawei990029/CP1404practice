@@ -29,9 +29,9 @@ class Taxi(Car):
 
     def drive(self, distance):
         """Drive like parent Car but calculate fare distance as well."""
-        random_number = random.randint(0, 100)
-        if random_number < self.reliability:
-            distance_driven = super().drive(distance)
-            self.current_fare_distance += distance_driven
-            return distance_driven
-        return 0
+        # random_number = random.randint(0, 100)
+        # if random_number < self.reliability:
+        distance_driven = super().drive(distance)
+        self.current_fare_distance += distance_driven
+        return distance_driven
+        # return 0
