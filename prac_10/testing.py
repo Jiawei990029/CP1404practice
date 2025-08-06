@@ -55,11 +55,11 @@ def run_tests():
 
 run_tests()
 
-# ODO: 3. Uncomment the following line and run the doctests
+# 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
 doctest.testmod()
 
-# ODO: 4. Fix the failing is_long_word function
+# 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
 
 # ODO: 5. Write and test a function to format a phrase as a sentence,
@@ -71,3 +71,19 @@ doctest.testmod()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
+
+def format_phrase(phrase):
+    """
+    >>> format_phrase('hello')
+    'Hello.'
+    >>> format_phrase('It is an ex parrot.')
+    'It is an ex parrot.'
+    >>> format_phrase('python is good')
+    'Python is good.'
+    """
+    # pass
+    phrase = phrase.rstrip('.')
+    phrase = phrase.capitalize()
+    return phrase + '.'
+
+doctest.testmod()
